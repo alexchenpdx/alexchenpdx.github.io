@@ -3,92 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Chen - Developer Blog</title>
+    <title>Alex Chen | Portfolio</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background: #f4f4f4; }
-        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
-        header { background: #2c3e50; color: white; padding: 20px 0; margin-bottom: 30px; }
-        header h1 { font-size: 2.5em; }
-        header p { opacity: 0.8; }
-        .post { background: white; padding: 20px; margin-bottom: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .post h2 { color: #2c3e50; margin-bottom: 10px; }
-        .post .meta { color: #666; font-size: 0.9em; margin-bottom: 15px; }
-        .post .content { margin-bottom: 15px; }
-        .post a { color: #3498db; text-decoration: none; }
-        .post a:hover { text-decoration: underline; }
-        footer { text-align: center; padding: 20px; color: #666; font-size: 0.9em; margin-top: 30px; }
-        .hidden-clue { font-size: 0.8em; color: #999; margin-top: 10px; }
-        .about { background: #ecf0f1; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
-        .about h3 { margin-bottom: 10px; }
-        .tag { display: inline-block; background: #3498db; color: white; padding: 2px 8px; border-radius: 3px; font-size: 0.8em; margin-right: 5px; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0a0a0a; color: #e0e0e0; }
+        .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%); }
+        .hero h1 { font-size: 3em; margin-bottom: 10px; }
+        .hero .subtitle { color: #6364ff; font-size: 1.2em; margin-bottom: 20px; }
+        .hero .bio { max-width: 600px; margin: 0 auto 30px; color: #999; line-height: 1.6; }
+        .hero .links { display: flex; gap: 20px; justify-content: center; }
+        .hero .links a { color: #6364ff; text-decoration: none; border: 1px solid #6364ff; padding: 10px 20px; border-radius: 5px; transition: all 0.3s; }
+        .hero .links a:hover { background: #6364ff; color: white; }
+        .section { padding: 80px 20px; max-width: 900px; margin: 0 auto; }
+        .section h2 { font-size: 2em; margin-bottom: 30px; text-align: center; }
+        .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .project { background: #1a1a2e; padding: 25px; border-radius: 10px; border: 1px solid #2a2a3e; }
+        .project h3 { color: #6364ff; margin-bottom: 10px; }
+        .project p { color: #999; font-size: 0.9em; line-height: 1.5; }
+        .project .tags { margin-top: 15px; }
+        .project .tag { display: inline-block; background: #2a2a3e; color: #6364ff; padding: 3px 10px; border-radius: 15px; font-size: 0.8em; margin-right: 5px; }
+        .skills { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; }
+        .skill { background: #1a1a2e; padding: 15px 25px; border-radius: 8px; border: 1px solid #2a2a3e; }
+        footer { text-align: center; padding: 40px; color: #666; border-top: 1px solid #1a1a2e; }
+        footer a { color: #6364ff; text-decoration: none; }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
+    <div class="hero">
+        <div>
             <h1>Alex Chen</h1>
-            <p>Software Developer | Portland, OR | @alexchenpdx</p>
+            <div class="subtitle">Software Developer | Portland, OR</div>
+            <div class="bio">
+                Junior software developer at TechFlow Inc. I build things with Python and Rust. When I'm not coding, I'm hiking the Pacific Northwest or playing guitar.
+            </div>
+            <div class="links">
+                <a href="https://github.com/alexchenpdx">GitHub</a>
+                <a href="https://mastodon.social/@alexchenpdx">Mastodon</a>
+                <a href="https://linkedin.com/in/alexchenpdx">LinkedIn</a>
+                <a href="mailto:shadow_coder_42@protonmail.com">Email</a>
+            </div>
         </div>
-    </header>
+    </div>
 
-    <div class="container">
-        <div class="about">
-            <h3>About Me</h3>
-            <p>Hi! I'm Alex, a junior software developer based in Portland, Oregon. I work at TechFlow Inc. and love building things with code. When I'm not coding, you can find me hiking in the Pacific Northwest or playing with my cat, Pixel.</p>
-            <p>Find me on <a href="https://github.com/alexchenpdx">GitHub</a> | <a href="https://mastodon.social/@alexchenpdx">Mastodon</a> | <a href="https://linkedin.com/in/alexchenpdx">LinkedIn</a></p>
-            <p class="hidden-clue">Old email: shadow_coder_42@protonmail.com</p>
+    <div class="section">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <h3>Project Nightingale</h3>
+                <p>A secret project I'm working on. More details coming soon.</p>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Secret</span>
+                </div>
+            </div>
+            <div class="project">
+                <h3>Dev Environment CLI</h3>
+                <p>A CLI tool for managing development environments. Written in Rust.</p>
+                <div class="tags">
+                    <span class="tag">Rust</span>
+                    <span class="tag">CLI</span>
+                </div>
+            </div>
+            <div class="project">
+                <h3>Python Automation Scripts</h3>
+                <p>Various Python scripts for automating daily tasks.</p>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Automation</span>
+                </div>
+            </div>
         </div>
+    </div>
 
-        <article class="post">
-            <h2>My First Week at TechFlow Inc.</h2>
-            <div class="meta">Posted on March 15, 2024 | Tags: <span class="tag">career</span> <span class="tag">tech</span></div>
-            <div class="content">
-                <p>Just finished my first week at TechFlow Inc.! Everyone has been super welcoming. I'm working on the backend team, mainly with Python and Django. The office is downtown Portland, and I love the food cart scene here.</p>
-                <p>One thing I'm excited about is a side project I'm starting called "Project Nightingale". It's still in early stages, but I think it could be something special. More details to come!</p>
-            </div>
-        </article>
-
-        <article class="post">
-            <h2>Weekend Hike at Mt. Hood</h2>
-            <div class="meta">Posted on March 22, 2024 | Tags: <span class="tag">hiking</span> <span class="tag">PNW</span></div>
-            <div class="content">
-                <p>Had an amazing hike at Mt. Hood this weekend! The weather was perfect, and the views were incredible. Pixel stayed with a friend since she's not a fan of long car rides.</p>
-                <p>If you're in the Portland area, I highly recommend the Timberline Trail. Just be prepared for some elevation gain!</p>
-            </div>
-        </article>
-
-        <article class="post">
-            <h2>Building a CLI Tool in Rust</h2>
-            <div class="meta">Posted on April 5, 2024 | Tags: <span class="tag">rust</span> <span class="tag">programming</span></div>
-            <div class="content">
-                <p>Started learning Rust last month, and I'm loving it! I'm building a CLI tool for managing my dev environment. Check out the progress on my <a href="https://github.com/alexchenpdx">GitHub</a>.</p>
-                <p>Fun fact: I used to go by "berkeley_hacker_2016" back in college. Glad I switched to a more professional handle!</p>
-            </div>
-        </article>
-
-        <article class="post">
-            <h2>Thai Food Adventures in Portland</h2>
-            <div class="meta">Posted on April 12, 2024 | Tags: <span class="tag">food</span> <span class="tag">portland</span></div>
-            <div class="content">
-                <p>Portland has some amazing Thai food! My favorite so far is Nong's Khao Man Gai. The pad see ew is absolutely perfect. If you're ever in the area, give it a try!</p>
-                <p>I usually go there after work. Driving my 2019 blue Honda Civic downtown is a pain, but worth it for the food.</p>
-            </div>
-        </article>
-
-        <article class="post">
-            <h2>Guitar Progress Update</h2>
-            <div class="meta">Posted on April 20, 2024 | Tags: <span class="tag">music</span> <span class="tag">hobbies</span></div>
-            <div class="content">
-                <p>Finally learned to play "Stairway to Heaven" all the way through! It only took me 3 months of practice. I'm still an amateur, but I'm getting better.</p>
-                <p>My guitar is a Fender Stratocaster that I bought at a music shop in Berkeley back in 2018. Good times.</p>
-            </div>
-        </article>
+    <div class="section">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="skill">Python</div>
+            <div class="skill">Rust</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Django</div>
+            <div class="skill">Git</div>
+            <div class="skill">Linux</div>
+            <div class="skill">SQL</div>
+            <div class="skill">REST APIs</div>
+        </div>
     </div>
 
     <footer>
-        <p>&copy; 2024 Alex Chen. Built with ❤️ in Portland, OR.</p>
-        <p class="hidden-clue">Security answer: What's my cat's name? (for password recovery)</p>
+        <p>Built with HTML/CSS by <a href="https://github.com/alexchenpdx">Alex Chen</a> | 2024</p>
     </footer>
 </body>
 </html>
